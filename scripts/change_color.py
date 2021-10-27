@@ -16,7 +16,7 @@ class CanvasColor:
 
     def turtlePoseCallback(self, msg):
         if self.pose_flag and msg.y < 5.4:
-            rospy.set_param('/turtlesim/background_r', rospy.get_param("/red"))
+            rospy.set_param('/turtlesim/background_r', 255)
             rospy.set_param('/turtlesim/background_b', 0)
             self.pose_flag = 0
             self.clear_srv()
